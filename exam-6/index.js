@@ -1,69 +1,66 @@
-class Book{
+class Book {
+  #author;
+  #price;
+  #rentalPrice;
+  #copiesAvailable;
+  constructor(title, author, price, rentalPrice, copiesAvailable) {
+    this.title = title;
+    this.#author = author;
+    this.#price = price;
+    this.#rentalPrice = rentalPrice;
+    this.#copiesAvailable = copiesAvailable;
+  }
 
-    
-    #author
-    #price
-    #rentalPrice
-    #copiesAvailable
-     constructor(title,author, price, rentalPrice, copiesAvailable){
-        this.title = title;
-        this.#author = author;
-        this.#price = price;
-        this.#rentalPrice = rentalPrice;
-        this.#copiesAvailable = copiesAvailable;
+  getTitle() {
+    return this.title;
+  }
+  setTitle(title) {
+    this.title = title;
+  }
+  getAuthor() {
+    return this.#author;
+  }
+  setAuthor(author) {
+    this.#author = author;
+  }
+  getPrice() {
+    return this.#price;
+  }
+  setPrice(price) {
+    this.#price = price;
+  }
+  getRentalPrice() {
+    return this.#rentalPrice;
+  }
+  setRentalPrice(rentalPrice) {
+    this.#rentalPrice = rentalPrice;
+  }
+  getCopiesAvailable() {
+    return this.#copiesAvailable;
+  }
+  setCopiesAvailable(copiesAvailable) {
+    this.#copiesAvailable = copiesAvailable;
+  }
+  BuyBook(copies) {
+    if (copies <= this.#copiesAvailable) {
+      this.#copiesAvailable -= copies;
+    } else {
+      console.log("Not enough copies available!");
     }
-
-    getTitle(){
-        return this.title;
+  }
+  RentBook(copies) {
+    if (copies <= this.#copiesAvailable) {
+      this.#copiesAvailable -= copies;
+    } else {
+      console.log("Not enough copies available!");
     }
-    setTitle(title){
-        this.title = title;
-    }
-    getAuthor(){
-        return this.#author;
-    }
-    setAuthor(author){
-        this.#author = author;
-    }
-    getPrice(){
-        return this.#price;
-    }
-    setPrice(price){
-        this.#price = price;
-    }
-    getRentalPrice(){
-        return this.#rentalPrice;
-    }
-    setRentalPrice(rentalPrice){
-        this.#rentalPrice = rentalPrice;
-    }
-    getCopiesAvailable(){
-        return this.#copiesAvailable;
-    }
-    setCopiesAvailable(copiesAvailable){
-        this.#copiesAvailable = copiesAvailable;
-    }
-    BuyBook(copies){
-        if(copies <= this.#copiesAvailable){
-            this.#copiesAvailable -= copies;
-            
-        }else{
-            console.log("Not enough copies available!");
-        }
-    }
-    RentBook(copies){
-        if(copies <= this.#copiesAvailable){
-            this.#copiesAvailable -= copies;
-        } else{
-            console.log("Not enough copies available!");
-        }
-    }
-    ReturnBook(copies){
-        this.#copiesAvailable += copies;
-    }
-    copiesAvailable(){
-        return this.#copiesAvailable;
-    }
+  }
+  ReturnBook(copies) {
+    this.#copiesAvailable += copies;
+  }
+  copiesAvailable() {
+    return this.#copiesAvailable;
+  }
 }
 
 let book1 = new Book("Book1", "Author1", 10, 5, 10);
