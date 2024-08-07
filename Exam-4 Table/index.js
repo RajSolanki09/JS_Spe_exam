@@ -65,12 +65,6 @@ const content = () => {
 
   handleSalesData("FullStack", sales.FullStack.count, sales.FullStack.fees);
   handleSalesData("FrontEnd", sales.FrontEnd.count, sales.FrontEnd.fees);
-  handleSalesData("BackEnd", sales.BackEnd.count, sales.BackEnd.fees);
-  handleSalesData(
-    "pythonDeveloper",
-    sales.pythonDeveloper.count,
-    sales.pythonDeveloper.fees
-  );
 };
 const handleData = (e) => {
   e.preventDefault();
