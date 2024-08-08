@@ -1,0 +1,20 @@
+img{
+    height: 525px;
+    width: 1440px;
+    margin-left: 3%;
+    margin-top: 10px;
+    border-radius: 50px;
+}
+input{
+    width: 400px;
+    height: 40px;
+    margin: 8px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+section {
+    border: 2px solid black;
+    height: 300px;
+    border-radius: 10px;
+}
